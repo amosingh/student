@@ -1,9 +1,11 @@
 pipeline{
 	agent any
 	stages{
-	stage('input CSV file'){
+	stage('parse the csv file'){
 		steps{
-			readFile("Wrokbook1.csv").split('\n')
+			readFile("Wrokbook1.csv").eachline {
+			
+			}
 			}
 		}
 	}
